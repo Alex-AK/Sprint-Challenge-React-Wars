@@ -11,6 +11,16 @@ class App extends Component {
     };
   }
 
+  handleIncrement = event => {
+    event.preventDefault();
+    console.log('+');
+  };
+
+  handleDecrement = event => {
+    event.preventDefault();
+    console.log('-');
+  };
+
   componentDidMount() {
     this.getCharacters('https://swapi.co/api/people');
   }
@@ -35,9 +45,14 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className="Header">Star Wars Character Database</h1>
-        <StarWarsCharacters chars={this.state.starwarsChars} />
+        <StarWarsCharacters
+          chars={this.state.starwarsChars}
+          increment={this.handleIncrement}
+          decrement={this.handleDecrement}
+        />
         {/* Character modal not properly receiving data from API */}
         {/* <CharacterDetailModal chars={this.state.starwarsChars} /> */}
+        {console.log(this.state.starwarsChars)}
       </div>
     );
   }
