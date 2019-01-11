@@ -36,8 +36,8 @@ class App extends Component {
       <div className="App">
         <h1 className="Header">Star Wars Character Database</h1>
         <StarWarsCharacters chars={this.state.starwarsChars} />
-        {/* Character modal default state is hidden */}
-        <CharacterDetailModal chars={this.state.starwarsChars} />
+        {/* Character modal not properly receiving data from API */}
+        {/* <CharacterDetailModal chars={this.state.starwarsChars} /> */}
       </div>
     );
   }

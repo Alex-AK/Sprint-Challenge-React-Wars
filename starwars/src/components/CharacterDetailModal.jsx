@@ -6,8 +6,7 @@ class CharacterDetailModal extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: false,
-      chars: props
+      open: false
     };
 
     console.log(props.chars);

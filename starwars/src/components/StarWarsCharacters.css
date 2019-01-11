@@ -20,12 +20,19 @@
   transition: all .4s;
 }
 
-
+/* 
 .detail-modal {
-  background: red;
   display: flex;
   justify-content: center;
-  align-content: center;
-  width: 70%;
-  z-index: 1;
+  align-items: center;
+  margin: -50% auto;
 }
+
+.modal-information {
+  border: 1px solid white;
+  z-index: 1;
+  background: darkgrey;
+  height: 50vh;
+  width: 70%;
+
+} */
