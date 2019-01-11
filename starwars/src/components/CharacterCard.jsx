@@ -4,7 +4,7 @@ const CharacterCard = props => {
   return (
     <div className="character-card">
       <p>{props.name}</p>
-      <button>Display Character Information</button>
+      <p>Birth Year: {props.birthYear}</p>
     </div>
   );
 };

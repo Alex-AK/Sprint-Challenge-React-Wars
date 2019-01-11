@@ -11,4 +11,21 @@
   padding: 20px;
   margin: 20px 0;
   background: lightgrey;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.character-card:hover {
+  background: darkgrey;
+  transition: all .4s;
+}
+
+
+.detail-modal {
+  background: red;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 70%;
+  z-index: 1;
 }

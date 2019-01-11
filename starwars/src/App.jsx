@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import StarWarsCharacters from './components/StarWarsCharacters';
+import CharacterDetailModal from './components/CharacterDetailModal';
 
 class App extends Component {
   constructor() {
@@ -35,6 +36,8 @@ class App extends Component {
       <div className="App">
         <h1 className="Header">Star Wars Character Database</h1>
         <StarWarsCharacters chars={this.state.starwarsChars} />
+        {/* Character modal default state is hidden */}
+        <CharacterDetailModal chars={this.state.starwarsChars} />
       </div>
     );
   }

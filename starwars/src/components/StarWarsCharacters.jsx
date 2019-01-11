@@ -9,7 +9,13 @@ const StarWarsCharacters = props => {
   return (
     <div className="card-container">
       {props.chars.map(char => {
-        return <CharacterCard key={char.name} name={char.name} />;
+        return (
+          <CharacterCard
+            key={char.name}
+            name={char.name}
+            birthYear={char.birth_year}
+          />
+        );
       })}
     </div>
   );
