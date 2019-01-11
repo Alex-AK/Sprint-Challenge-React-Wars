@@ -1,8 +1,14 @@
 import React from 'react';
-import Character from './Character';
+import CharacterCard from './CharacterCard';
+
+import './StarWarsCharacters.css';
 
 const StarWarsCharacters = props => {
-  return <Character />;
+  return (
+    <div className="card-container">
+      <CharacterCard chars={props.chars} />
+    </div>
+  );
 };
 
 export default StarWarsCharacters;
