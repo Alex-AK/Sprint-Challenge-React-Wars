@@ -4,11 +4,16 @@ import CharacterCard from './CharacterCard';
 import './StarWarsCharacters.css';
 
 const StarWarsCharacters = props => {
+  // const charName = props.chars.map(char => char.name);
+  // console.log(charName);
   return (
     <div className="card-container">
-      <CharacterCard chars={props.chars} />
+      {props.chars.map(char => {
+        return <CharacterCard key={char.name} name={char.name} />;
+      })}
     </div>
   );
+  // <CharacterCard />
 };
 
 export default StarWarsCharacters;
