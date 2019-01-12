@@ -4,7 +4,6 @@ import CharacterCard from './CharacterCard';
 import './StarWarsCharacters.css';
 
 const StarWarsCharacters = props => {
-  const currentIndex = props.currentIndex;
   const newChars = props.chars.map(char => {
     return (
       <CharacterCard
@@ -21,14 +20,21 @@ const StarWarsCharacters = props => {
 
   return (
     <div>
-      <div className="card-container">{newChars[currentIndex]}</div>
-      <button type="text" length={newChars.length} onClick={props.decrement}>
+      <div className="card-container">{newChars}</div>
+      <button
+        type="text"
+        onClick={props.decrement}
+        disabled={!props.previous ? true : null}
+      >
         Previous
       </button>
-      <button type="text" onClick={props.increment}>
+      <button
+        type="text"
+        onClick={props.increment}
+        disabled={!props.next ? true : null}
+      >
         Next
       </button>
-      {/* {console.log(newChars.length)} */}
     </div>
   );
 };
